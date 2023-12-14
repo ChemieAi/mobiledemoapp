@@ -1,8 +1,11 @@
 package com.first.mobiledemoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+// For Java
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,9 +16,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Create and set the adapter with coffee data
         CoffeeAdapter coffeeAdapter = new CoffeeAdapter(/* pass your data here */);
         recyclerView.setAdapter(coffeeAdapter);
-        
     }
 }
+
